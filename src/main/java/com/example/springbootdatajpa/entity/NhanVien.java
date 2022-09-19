@@ -13,12 +13,21 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Table(name = "nhanvien")
-public class Nhanvien {
+public class NhanVien {
     @Id
     @GeneratedValue
-    private long EmployeeId;
-    @Column(name = "ten_nhanvien")
+    private long MaNV;
+    @Column(name = "Ten")
     private String ten;
-    @Column(name = "luong")
+    @Column(name = "Luong")
     private long luong;
+
+    public NhanVien() {
+
+    }
+    public NhanVien(long MaNV, String ten, long luong) {
+        MaNV = MaNV;
+        this.ten = ten;
+        this.luong = luong;
+    }
 }

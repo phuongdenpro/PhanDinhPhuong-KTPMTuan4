@@ -1,10 +1,10 @@
 package com.example.springbootdatajpa.service;
 
-import com.example.springbootdatajpa.entity.Nhanvien;
+import com.example.springbootdatajpa.entity.NhanVien;
 
 import java.util.List;
 
 public interface EmployeeService {
-    List<Nhanvien> findEmployeeByLuong(long luong);
+    List<NhanVien> findEmployeeByLuong(long luong);
 
 }
