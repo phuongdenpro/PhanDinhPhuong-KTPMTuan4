@@ -1,6 +1,8 @@
 package com.example.springbootdatajpa.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -14,6 +16,8 @@ import java.util.Date;
 @Table(name = "chuyenbay")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Chuyenbay implements Serializable {
     @Id
     @Column(name="MaCB")
@@ -37,15 +41,5 @@ public class Chuyenbay implements Serializable {
     @Column(name="ChiPhi")
     private int chiPhi;
 
-    public Chuyenbay() {
-    }
-    public Chuyenbay(String macb, String gaDi, String gaDen, int doDai, Date gioDi, Date gioDen, int chiPhi) {
-        this.maCB = macb;
-        this.gaDi = gaDi;
-        this.gaDen = gaDen;
-        this.doDai = doDai;
-        this.gioDi = gioDi;
-        this.gioDen = gioDen;
-        this.chiPhi = chiPhi;
-    }
+
 }

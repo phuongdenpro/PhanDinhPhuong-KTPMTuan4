@@ -1,6 +1,8 @@
 package com.example.springbootdatajpa.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -13,6 +15,8 @@ import java.io.Serializable;
 @Table(name = "maybay")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class MayBay implements Serializable {
     @Id
     @Column(name = "MaMB")
@@ -24,11 +28,5 @@ public class MayBay implements Serializable {
     @Column(name = "TamBay")
     private int tamBay;
 
-    public MayBay(int maMB, String loai, int tamBay) {
-        this.maMB = maMB;
-        this.loai = loai;
-        this.tamBay = tamBay;
-    }
-    public MayBay() {
-    }
+
 }
