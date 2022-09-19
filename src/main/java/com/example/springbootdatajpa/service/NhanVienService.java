@@ -4,7 +4,7 @@ import com.example.springbootdatajpa.entity.NhanVien;
 
 import java.util.List;
 
-public interface EmployeeService {
+public interface NhanVienService {
     List<NhanVien> findEmployeeByLuong(long luong);
 
 }

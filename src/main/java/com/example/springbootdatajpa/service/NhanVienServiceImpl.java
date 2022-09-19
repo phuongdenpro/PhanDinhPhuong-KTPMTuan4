@@ -4,7 +4,7 @@ import com.example.springbootdatajpa.entity.NhanVien;
 
 import java.util.List;
 
-public class EmployeeServiceImpl implements EmployeeService{
+public class NhanVienServiceImpl implements NhanVienService {
     @Override
     public List<NhanVien> findEmployeeByLuong(long luong) {
         return null;
