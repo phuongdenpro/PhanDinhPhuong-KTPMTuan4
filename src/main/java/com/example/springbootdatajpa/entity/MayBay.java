@@ -15,18 +15,32 @@ import java.io.Serializable;
 @Table(name = "maybay")
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class MayBay implements Serializable {
     @Id
-    @Column(name = "MaMB")
+    @Column(name = "mamb")
     private int maMB;
 
-    @Column(name = "Loai")
+    @Column(name = "loai", columnDefinition = "varchar(50)")
     private String loai;
 
-    @Column(name = "TamBay")
+    @Column(name = "tambay")
     private int tamBay;
 
+    public MayBay(int maMB, String loai, int tamBay) {
+        this.maMB = maMB;
+        this.loai = loai;
+        this.tamBay = tamBay;
+    }
 
+    public MayBay(String loai, int tamBay) {
+        this.loai = loai;
+        this.tamBay = tamBay;
+    }
+
+    public MayBay(int maMB) {
+        this.maMB = maMB;
+    }
+
+    public MayBay() {
+    }
 }
